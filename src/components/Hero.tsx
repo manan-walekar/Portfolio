@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  Mail,
+  Youtube,
+  Instagram,
+  Pinterest,
+} from "lucide-react";
 import mananProfile from "@/assets/manan-profile.png";
 
 const Hero = () => {
@@ -58,6 +66,30 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center gap-6">
+            <a
+              href="https://www.youtube.com/@Krayoplays"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-card rounded-full hover:scale-110 transition-transform gothic-border"
+            >
+              <Youtube className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.instagram.com/krayoplays/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-card rounded-full hover:scale-110 transition-transform gothic-border"
+            >
+              <Instagram className="h-6 w-6" />
+            </a>
+            {/* <a
+              href="https://in.pinterest.com/cuzziwanttospamm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-card rounded-full hover:scale-110 transition-transform gothic-border"
+            >
+              <Pinterest className="h-6 w-6" />
+            </a> */}
             <a
               href="https://github.com/manan-walekar"
               target="_blank"
