@@ -9,14 +9,22 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean,
+  ),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    outDir: "dist",
+    sourcemap: mode === "development",
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: mode === "production",
+      },
     },
   },
 }));
