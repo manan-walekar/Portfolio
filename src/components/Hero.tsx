@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import CurvedLoop from "./CurvedLoop";
 import {
   ArrowDown,
   Github,
@@ -9,6 +10,7 @@ import {
   Pinterest,
 } from "lucide-react";
 import mananProfile from "@/assets/manan-profile.png";
+import DecryptedText from "@/components/ui/decrypted-text";
 
 const Hero = () => {
   const scrollToWork = () => {
@@ -43,17 +45,33 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 tracking-tight gothic-title">
-            <span className="block text-foreground gothic-ornament">MANAN</span>
-            <span className="block glow-text scribble-underline">WALEKAR</span>
+            <DecryptedText
+              text="MANAN"
+              className="block text-foreground gothic-ornament"
+            />
+            <DecryptedText
+              text="WALEKAR"
+              className="block glow-text scribble-underline"
+            />
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto gothic-title">
+          {/* <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto gothic-title">
             Software Engineer & UI/UX Designer
-          </p>
-          <p className="text-base sm:text-lg text-muted-foreground/80 mb-8 max-w-2xl mx-auto">
+          </p> */}
+          <CurvedLoop
+            marqueeText="    CODER    ✦    DESIGNER    ✦    GAMER    ✦    DEVELOPER    ✦"
+            color="red"
+            marqueeTextSize={50}
+            speed={1}
+            curveAmount={0}
+            direction="right"
+            interactive
+            className="text-xl sm:text-2xl md:text-3xl lg:text-6xl text-muted-foreground mb-6 max-w-3xl mx-auto gothic-title"
+          />
+          {/* <p className="text-base sm:text-lg text-muted-foreground/80 mb-8 max-w-2xl mx-auto">
             Building practical, user-friendly applications with full-stack
             development expertise
-          </p>
+          </p> */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
